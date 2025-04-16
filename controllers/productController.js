@@ -9,7 +9,9 @@ const getProductsById=(req,res)=>{
 }
 
 const postProducts=(req,res)=>{
-  res.send("New product added");
+  //res.send("New product added");
+  const data=req.data;
+  res.json({value:data.productName});
 }
 
 const editProducts=(req,res)=>{

@@ -6,6 +6,9 @@ const usersRoutes=require('./routes/user');
 const productsRoutes=require('./routes/product');
 const cartRoutes=require('./routes/cart');
 
+app.use(express.static('public'));
+app.use(express.json());
+
 app.use('/api/user',usersRoutes);
 app.use('/api/product',productsRoutes);
 app.use('/api/cart',cartRoutes);
